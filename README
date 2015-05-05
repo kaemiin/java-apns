@@ -1,0 +1,25 @@
+0. Setup:
+請將測試用.p12檔案放置在專案目錄:/src/test/resources下，並修改測試程式(/src/test/java/PChatTest.java)中的相關設定：
+
+CLIENT_STORE
+CLIENT_PASSWORD
+APNS_ADDR
+DEVICE_TOKEN
+
+其中，DEVICE_TOKEN請至主機端的Redis環境中執行：
+
+hget token:cmpnyid_userid device
+
+請將上述的"cmpnyid"與"userid"置換成你欲測試對象。
+
+1. Run It:
+
+在專案目錄下執行：
+mvn test
+
+2. Open It Via Eclipse:
+
+在專案目錄下執行：
+mvn eclipse:eclipse
+
+and open it use Maven Project Import in Eclipse.
